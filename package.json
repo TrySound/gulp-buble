@@ -1,6 +1,6 @@
 {
   "name": "gulp-buble",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Compile ES2015 with buble",
   "main": "index.js",
   "scripts": {
