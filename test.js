@@ -52,7 +52,7 @@ it('should generate source maps', function (cb) {
         .pipe(write);
 
     write.on('data', function (file) {
-        assert.equal(file.sourceMap.mappings, 'AAAA,YAAM');
+        assert.equal(file.sourceMap.mappings, 'AAAA,SAAA,GAAG,AAAG');
         var contents = file.contents.toString();
         assert(/function/.test(contents));
         assert(/sourceMappingURL=data:application\/json;/.test(contents));
