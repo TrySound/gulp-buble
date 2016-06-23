@@ -29,7 +29,11 @@ it('should fail on syntax error', function (cb) {
     var stream = buble();
 
     stream.on('error', function (err) {
-        assert.equal(err.message, 'SyntaxError: Unexpected token (1:7)');
+        assert.equal(err.message, [
+            'SyntaxError: Unexpected token (1:7)',
+            '1 : () => {',
+            '           ^'
+        ].join('\n'));
         cb();
     });
 
