@@ -25,6 +25,26 @@ gulp.task('default', function () {
 });
 ```
 
+It is possible to pass transforms option as the first argument to `buble()`, to tansform only some specific features of ES2015. For example:
+
+```js
+const gulp = require('gulp');
+const buble = require('gulp-buble');
+
+gulp.task('default', function () {
+	return gulp.src('src/app.js')
+		.pipe(buble({
+			transforms: {
+				arrow: true,
+				generator: false
+			}
+		}))
+		.pipe(gulp.dest('dist'));
+});
+```
+
+For complete list of buble options, please consult [buble guide](https://buble.surge.sh/guide/#using-the-javascript-api)
+
 
 ## Source Maps
 
