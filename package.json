@@ -28,16 +28,16 @@
   },
   "homepage": "https://github.com/TrySound/gulp-buble",
   "dependencies": {
-    "buble": "^0.13.1",
-    "vinyl": "^2.1.0",
+    "buble": "^0.18.0",
     "plugin-error": "^0.1.2",
     "readable-stream": "^2.1.0",
+    "vinyl": "^2.1.0",
     "vinyl-sourcemaps-apply": "^0.2.1"
   },
   "devDependencies": {
-    "eslint": "^2.13.1",
+    "eslint": "^4.14.0",
     "eslint-config-postcss": "^2.0.2",
     "gulp-sourcemaps": "^2.0.0-alpha",
-    "mocha": "^3.0.2"
+    "mocha": "^4.1.0"
   }
 }
