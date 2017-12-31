@@ -1,7 +1,7 @@
 var Transform = require('readable-stream').Transform;
 var applySourceMap = require('vinyl-sourcemaps-apply');
 var buble = require('buble').transform;
-var PluginError = require('gulp-util').PluginError;
+var PluginError = require('plugin-error');
 
 module.exports = function (options) {
     return new Transform({

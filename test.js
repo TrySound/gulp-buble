@@ -1,7 +1,7 @@
 /* eslint-env mocha */
 var path = require('path');
 var assert = require('assert');
-var gutil = require('gulp-util');
+var File = require('vinyl');
 var sourceMaps = require('gulp-sourcemaps');
 var buble = require('./');
 
@@ -15,7 +15,7 @@ it('should compile es2015', function (cb) {
         cb();
     });
 
-    stream.write(new gutil.File({
+    stream.write(new File({
         cwd: __dirname,
         base: path.resolve('fixture'),
         path: path.resolve('fixture/fixture.js'),
@@ -37,7 +37,7 @@ it('should fail on syntax error', function (cb) {
         cb();
     });
 
-    stream.write(new gutil.File({
+    stream.write(new File({
         cwd: __dirname,
         base: path.resolve('fixture'),
         path: path.resolve('fixture/fixture.js'),
@@ -63,7 +63,7 @@ it('should generate source maps', function (cb) {
         cb();
     });
 
-    init.write(new gutil.File({
+    init.write(new File({
         cwd: __dirname,
         base: path.resolve('fixture'),
         path: path.resolve('fixture/fixture.js'),
@@ -91,7 +91,7 @@ it('should read upstream source maps', function (cb) {
         cb();
     });
 
-    testFile = new gutil.File({
+    testFile = new File({
         cwd: __dirname,
         base: path.resolve('fixture'),
         path: path.resolve('fixture/fixture.js'),
